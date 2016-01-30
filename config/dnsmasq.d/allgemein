@@ -1,0 +1,5 @@
+interface=ffbrb-br
+interface=bat0
+interface=ffbrb-vpn
+bind-interfaces
+log-facility=/var/log/dnsmasq.log

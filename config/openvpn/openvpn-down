@@ -1,0 +1,5 @@
+#!/bin/sh
+ip rule del from $ifconfig_local table brandenburg priority 9970
+# NAT deaktivieren, wird benötigt wenn NICHT Berlin
+#iptables -t nat -D POSTROUTING -o $dev -j MASQUERADE
+exit 0

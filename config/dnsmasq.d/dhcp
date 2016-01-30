@@ -1,0 +1,11 @@
+dhcp-authoritative
+#log-dhcp
+domain=freifunk-brandenburg.de
+dhcp-range=set:ffbrb,172.21.32.21,172.21.33.253,255.255.192.0,5m
+dhcp-option=tag:ffbrb,3,172.21.32.1
+dhcp-option=tag:ffbrb,option:dns-server,172.21.32.1,8.8.8.8
+dhcp-option=tag:ffbrb,option:ntp-server,172.21.32.1
+dhcp-range=set:ffbrbv6,::,constructor:ffbrb-br,slaac,ra-only,5m
+dhcp-option=tag:ffbrbv6,option6:dns-server,fd21:b4dc:4b1e::a38:8
+enable-ra
+ra-param=ffbrb-br,low,0,0

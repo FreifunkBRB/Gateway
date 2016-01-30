@@ -1,0 +1,8 @@
+#!/bin/sh
+# Peers aktualisieren
+cd /etc/fastd/ffbrb-vpn/peers
+git pull -q
+# fastd Config reload
+killall -SIGHUP fastd
+# VPN Status
+connections.py >/var/www/html/fastd.html
